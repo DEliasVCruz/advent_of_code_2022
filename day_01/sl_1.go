@@ -39,22 +39,15 @@ func main() {
 		if scann.Text() != "" {
 			current_number, err := strconv.Atoi(scann.Text())
 			check(err)
-
-			// fmt.Println(current_number)
 			sum = sum + int32(current_number)
-
-			// fmt.Println(sum)
 		} else {
 			max = new_max(max, sum)
-			// fmt.Println(sum)
 			sum = 0
-			// fmt.Println(scann.Text())
 		}
 	}
 	check(scann.Err())
 
 	max = new_max(max, sum)
-
 	fmt.Println(max)
 
 }
